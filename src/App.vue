@@ -1,5 +1,7 @@
 <template>
-  <div class="box"></div>
+  <div class="box">
+    <router-view></router-view>
+  </div>
 </template>
 <script setup lang="ts">
 import { reqLogin } from "./api/user";
