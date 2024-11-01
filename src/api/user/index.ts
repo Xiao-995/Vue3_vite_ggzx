@@ -8,10 +8,11 @@ enum API {
 }
 // any:任意类型，不做检查
 export const reqLogin = (data: loginForm) => {
+  
   // <any, loginResponseData>表示请求参数可以是任意类型，返回参数必须是定义的类型
-  request.post<any, loginResponseData>(API.LOGIN_URL, data);
+ return request.post<any, loginResponseData>(API.LOGIN_URL, data);
 };
 
 export const reqUserInfo = () => {
-  request.get<any, userResponseData>(API.USERINFO_URL);
+ return request.get<any, userResponseData>(API.USERINFO_URL);
 };
